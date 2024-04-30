@@ -21,7 +21,7 @@ class Solution {
                     temp = l * (j - i);
                     i++;
                 } else if (height[j - 1] < height[j]) {
-                    l = height[i];
+                    l = height[j];
                     temp = l * (j - i);
                     j--;
                 }
@@ -29,12 +29,12 @@ class Solution {
                     if(height[i+1]>height[j-1]){
                     l = height[i];
                     temp = l * (j - i);
-                    j--;
+                    i++;
                 }
                 else{
-                    l = height[i];
+                    l = height[j];
                     temp = l * (j - i);
-                    i++;
+                    j--;
                 }
 
                 }
