@@ -1,7 +1,9 @@
 class Solution {
     public int[] searchRange(int[] arr, int target) {
     int[] res={-1,-1};
+        //for first index
         res[0] = bs(arr,target,true);
+        //for last index
         res[1] = bs(arr,target,false);
         return res;
     }
