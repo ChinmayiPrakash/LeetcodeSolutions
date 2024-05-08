@@ -30,6 +30,7 @@ class Solution {
         }
         return arr;
     }
+    // after cyclic sort whichever index doesn't match with element return index + 1. if //matches , return last matching element + 1
     static int FirstMissingPositive(int[] arr) {
         int val = 0;
         for (int i = 0; i <= arr.length-1; i++) {
