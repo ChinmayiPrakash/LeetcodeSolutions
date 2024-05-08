@@ -1,4 +1,6 @@
 class Solution {
+    // Using cyclic sort technique, first we will sort array according to their index 
+    // then if arr[i] != i+1 , we will return arr[i] which has repeated elements.
     public List<Integer> findDuplicates(int[] nums) {
       nums = func_disappearedElements(nums);
         return (findnotEqual(nums));
