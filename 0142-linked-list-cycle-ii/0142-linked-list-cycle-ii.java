@@ -18,10 +18,13 @@ public class Solution {
             if(l>0){
                 ListNode f = head;
                 ListNode s = head;
+                // moving s to node which is at length of the loop distance
                 while(l>0){
                     s= s.next;
                     l--;
                 }
+                
+                // moving both f and s together until they meet because that is the only point where loop nodes and non loop nodes meet.
                 while(s!=f){
                     f = f.next;
                     s = s.next;
