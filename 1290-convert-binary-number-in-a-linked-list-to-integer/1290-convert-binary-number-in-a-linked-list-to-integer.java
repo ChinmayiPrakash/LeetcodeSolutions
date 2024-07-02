@@ -10,7 +10,7 @@
  */
 class Solution {
     public int getDecimalValue(ListNode head) {
-        ListNode cur = head;
+      /*  ListNode cur = head;
         Long num ;
         String str = "";
         int ans = 0;
@@ -32,6 +32,15 @@ class Solution {
         }
       
       
-        return ans;
+        return ans;*/
+        //found answer
+        int sum = 0;
+        
+        while (head != null){
+            sum = sum * 2;
+            sum = sum + head.val;
+            head = head.next;
+        }
+        return sum;
     }
 }
