@@ -1,6 +1,6 @@
 class Solution {
     public int[] productExceptSelf(int[] nums) {
-       /* boolean zeroindex=false;
+        boolean zeroindex=false;
         int count=0,index=0,product =1;
         int[] op = new int[nums.length];
         for(int i =0;i<nums.length;i++){
@@ -30,8 +30,8 @@ class Solution {
                 op[i]= product/nums[i];
             }
         }
-        return op;*/
-        int n = nums.length;
+        return op;
+        /*int n = nums.length;
         int ans[] = new int[n];
         Arrays.fill(ans, 1);
         int curr = 1;
@@ -44,6 +44,6 @@ class Solution {
             ans[i] *= curr;
             curr *= nums[i];
         }
-        return ans;
+        return ans;*/
     }
 }
