@@ -1,5 +1,5 @@
 class Solution {
-    static HashSet<Integer> set = new HashSet();
+  /*  static HashSet<Integer> set = new HashSet();
     public boolean isValidSudoku(char[][] board) {
             set.clear();
             int[] temp = new int[9];
@@ -79,6 +79,58 @@ return true;
                 }
             }
 
+        }
+        return true;
+    }*/
+    
+    public boolean isValidSudoku(char[][] board) {
+        for (int i = 0; i < board.length; i++) {
+            if (!validateRow(board, i) || !validateColumn(board, i)) {
+                return false;
+            }
+        }
+
+        for (int i = 0; i < board.length; i += 3) {
+            for (int j = 0; j < board[i].length; j += 3) {
+                if (!validateBox(board, i, j)) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
+
+    private boolean validateRow(char[][] board, int row) {
+        HashSet<Character> set = new HashSet<>();
+        for (int j = 0; j < board[row].length; j++) {
+            char current = board[row][j];
+            if (current != '.' && !set.add(current)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean validateColumn(char[][] board, int col) {
+        HashSet<Character> set = new HashSet<>();
+        for (int i = 0; i < board.length; i++) {
+            char current = board[i][col];
+            if (current != '.' && !set.add(current)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private boolean validateBox(char[][] board, int startRow, int startCol) {
+        HashSet<Character> set = new HashSet<>();
+        for (int i = startRow; i < startRow + 3; i++) {
+            for (int j = startCol; j < startCol + 3; j++) {
+                char current = board[i][j];
+                if (current != '.' && !set.add(current)) {
+                    return false;
+                }
+            }
         }
         return true;
     }
