@@ -6,7 +6,7 @@ class Solution {
             if(log.chars().anyMatch(Character::isLetterOrDigit)){
                 count ++;
             }
-            else if(log.contains("../")){
+            else if(log.equals("../")){
                 if(count!=0){
                     count--;
                 }
