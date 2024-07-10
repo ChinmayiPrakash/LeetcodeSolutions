@@ -1,6 +1,6 @@
 class Solution {
     public boolean isValid(String s) {
-      int n = s.length();
+    /*  int n = s.length();
         Stack<Character> st = new Stack<>();
 
         for(int i = 0;i<s.length();i++){
@@ -17,5 +17,12 @@ class Solution {
         }
 
         return st.isEmpty();
+    }*/
+         while(s.contains("()") || s.contains("[]") || s.contains("{}")){
+            s=s.replace("()","");
+            s=s.replace("[]","");
+            s=s.replace("{}","");
+        }
+        return s.isEmpty();
     }
 }
