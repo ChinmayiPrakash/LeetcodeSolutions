@@ -10,6 +10,7 @@ class Solution {
         int right = rows * cols - 1;
 
         while (left <= right) {
+            //flattening matrix into array
             int mid = left + (right - left) / 2;
             int midElement = matrix[mid / cols][mid % cols];
 
