@@ -17,14 +17,14 @@ class Solution {
                     res.add(l);
                     //l++;
                 }//else{
-                    if(smap.containsKey(s.charAt(l))){
+                    //if(smap.containsKey(s.charAt(l))){
                         if(smap.get(s.charAt(l))==1){
                             smap.remove(s.charAt(l));
                         }else {
                             smap.put(s.charAt(l), smap.getOrDefault(s.charAt(l), 0) - 1);
                         }
                         l++;
-                    }
+                   // }
                 //}
             }
             r++;
