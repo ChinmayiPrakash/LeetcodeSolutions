@@ -10,25 +10,17 @@ class Solution {
         int l=0;
         int r= 0;
 
-        while (r<s.length()){
+        while(r<s.length()){
             smap.put(s.charAt(r),smap.getOrDefault(s.charAt(r),0)+1);
             if(r-l+1 == p.length()){
-                if(smap.equals(pmap)){
-                    res.add(l);
-                    
-                }
-                   // if(smap.containsKey(s.charAt(l))){
-                        if(smap.get(s.charAt(l))==1){
-                            smap.remove(s.charAt(l));
-                        }else {
-                            smap.put(s.charAt(l), smap.getOrDefault(s.charAt(l), 0) - 1);
-                        }
-                        l++;
-                   // }
-                
+                if(smap.equals(pmap))
+                    res.add(l);      
+                smap.put(s.charAt(l), smap.get(s.charAt(l)) - 1);
+                if(smap.get(s.charAt(l))==0) 
+                    smap.remove(s.charAt(l));
+                l++;  
             }
             r++;
-
         }
         return res;
     }
