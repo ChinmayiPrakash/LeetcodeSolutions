@@ -1,6 +1,6 @@
 class Solution {
     public List<Integer> findAnagrams(String s, String p) {
-       HashMap<Character,Integer> pmap = new HashMap<>();
+      /* HashMap<Character,Integer> pmap = new HashMap<>();
         HashMap<Character,Integer> smap = new HashMap<>();
         List<Integer> res = new ArrayList<>();
 
@@ -29,6 +29,25 @@ class Solution {
             }
             r++;
 
+        }
+        return res;*/
+        int[] sa = new int[26];
+        int[] pa = new int[26];
+        List<Integer> res = new ArrayList<>();
+        for (int i = 0; i < p.length(); i++) {
+            pa[p.charAt(i)-'a']++;
+        }
+        int l=0,r=0;
+        while (r<s.length()){
+            sa[s.charAt(r)-'a']++;
+            if(r-l+1==p.length()){
+                if(Arrays.equals(sa,pa)){
+                    res.add(l);
+                }
+                sa[s.charAt(l)-'a']--;
+                l++;
+            }
+            r++;
         }
         return res;
     }
