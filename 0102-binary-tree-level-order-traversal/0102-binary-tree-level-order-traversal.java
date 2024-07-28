@@ -20,7 +20,7 @@ class Solution {
 
         //check if root is null , if null return empty list
         if(root == null){
-            System.out.println("Tree is Empty");
+           // System.out.println("Tree is Empty");
             return result;
         }
 
@@ -40,7 +40,7 @@ class Solution {
             for (int i = 0; i < level; i++) {
                 // popping first node from queue
                 TreeNode currentnode = queue.poll();
-                System.out.print(currentnode.val + "->");
+               // System.out.print(currentnode.val + "->");
                 //adding poped node to currentlevel list
                 currentlevel.add(currentnode.val);
 
