@@ -16,7 +16,7 @@
 class Solution {
     public List<Double> averageOfLevels(TreeNode root) {
         List<Double> avg = new ArrayList<>();
-        
+        Double avgval = 0.0;
         if(root==null){
             return avg;
         }
@@ -38,7 +38,7 @@ class Solution {
                 }
                 
             }
-            Double avgval = sum / level;
+           avgval = sum / level;
             avg.add(avgval);
         }
         
