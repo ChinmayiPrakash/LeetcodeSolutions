@@ -68,8 +68,10 @@ class Solution {
         while(leftmost.left != null){
             Node cur = leftmost;
             while(cur != null){
+                // to connect children of a root
                 cur.left.next = cur.right;
                 if(cur.next !=null){
+                    // to connect childrens of different root or to connect a bridge
                     cur.right.next = cur.next.left;
                 }
                 cur = cur.next;
