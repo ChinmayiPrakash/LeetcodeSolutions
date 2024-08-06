@@ -1,17 +1,22 @@
 class Solution {
     public boolean canBeEqual(int[] target, int[] arr) {
-        if(arr.length != target.length){
-            return false;
+        // Frequency count for arr
+        Map<Integer, Integer> arrFreq = new HashMap<>();
+        for (int num : arr) {
+            arrFreq.put(num, arrFreq.getOrDefault(num, 0) + 1);
         }
-        Arrays.sort(arr);
-        System.out.println(Arrays.toString(arr));
-        Arrays.sort(target);
-        System.out.println(Arrays.toString(target));
-        if(Arrays.equals(arr,target)){
-            return true;
+
+        for (int num : target) {
+            // If num does not appear in target, then arrays are not equal
+            if (!arrFreq.containsKey(num)) return false;
+
+            // Decrement the frequency count for num and
+            // remove key if the count goes to 0
+            arrFreq.put(num, arrFreq.get(num) - 1);
+            if (arrFreq.get(num) == 0) {
+                arrFreq.remove(num);
+            }
         }
-        else{
-            return false;
-        }
+        return arrFreq.size() == 0;
     }
 }
