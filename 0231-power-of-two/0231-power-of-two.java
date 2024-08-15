@@ -18,6 +18,6 @@ class Solution {
             return 1;
 
         }
-        return helperfunc(Double.valueOf(n)/2.0);
+        return helperfunc(n/2.0);
     }
 }
