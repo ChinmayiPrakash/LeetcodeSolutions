@@ -9,7 +9,7 @@
  * }
  */
 class Solution {
-   /*  static ListNode  mid = null;
+    static ListNode  mid = null;
     public boolean isPalindrome(ListNode head) {
         getMiddle(head);
         ListNode second = mid.next;
@@ -51,9 +51,9 @@ class Solution {
             
         }
         mid = slow;
-        System.out.println(mid.val);
-    }*/
-     ListNode curr;
+      //  System.out.println(mid.val);
+    }
+   /*  ListNode curr;
      public boolean isPalindrome(ListNode head) {
         curr = head;
         return solve(head);
@@ -64,5 +64,5 @@ class Solution {
         boolean ans = solve(head.next) && head.val == curr.val;
         curr = curr.next;
         return ans;
-    }
+    }*/
 }
