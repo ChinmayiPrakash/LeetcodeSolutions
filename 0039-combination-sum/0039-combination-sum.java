@@ -12,12 +12,16 @@ class Solution {
 
         }
         return;}
+         //consider only when target is greater than element at that index
         if(target>=arr[index]){
+            //taking an element
             emptylist.add(arr[index]);
+            //not incrementing current index just to consider same element more than once to get required target
             helper(index,emptylist,(target-arr[index]),arr,res);
+            //removing an element
             emptylist.remove(emptylist.size()-1);
         }
-
+        //increment index to consider next element
         helper(index+1,emptylist,target,arr,res);
 
 
