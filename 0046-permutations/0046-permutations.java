@@ -1,5 +1,5 @@
 class Solution {
-    public List<List<Integer>> permute(int[] nums) {
+    /*public List<List<Integer>> permute(int[] nums) {
          List<List<Integer>> res = new ArrayList<>();
         int[] marker = new int[nums.length];
         helper(new ArrayList<>(),marker,nums,res);
@@ -21,5 +21,35 @@ class Solution {
            }
        }
 
+    }*/
+    public static List<List<Integer>> permute(int[] nums) {
+        List<List<Integer>> res = new ArrayList<>();
+        //int[] marker = new int[nums.length];
+        helper(0,nums,res);
+        return res;
+    }
+    static void helper(int index,int[] arr,List<List<Integer>> res){
+        if(index==arr.length){
+            List<Integer> temp = new ArrayList<>();
+            for (int i = 0;i< arr.length;i++){
+                temp.add(arr[i]);
+            }
+            res.add(new ArrayList<>(temp));
+            return;
+        }
+        for (int j = index; j < arr.length; j++) {
+            swap(index,j,arr);
+            helper(index+1,arr,res);
+            swap(index,j,arr);
+            //System.out.println(Arrays.toString(arr));
+        }
+
+
+
+    }
+    static void swap(int first,int second, int[] arr){
+        int temp = arr[first];
+        arr[first] = arr[second];
+        arr[second] = temp;
     }
 }
