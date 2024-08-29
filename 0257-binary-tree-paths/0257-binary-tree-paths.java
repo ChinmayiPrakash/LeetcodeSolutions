@@ -47,6 +47,7 @@ class Solution {
             str.add(temp);
         }
         else{
+            //create new list here for every iteration
             helperfunc(cur.left,str,new ArrayList<>(elist));
             helperfunc(cur.right,str,new ArrayList<>(elist));
         }
