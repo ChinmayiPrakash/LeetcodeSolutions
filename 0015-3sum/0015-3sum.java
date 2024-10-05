@@ -1,6 +1,6 @@
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
-         List<List<Integer>> res = new ArrayList<>();
+       /*  List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);  // Sort the array to use two-pointer technique
 
         for (int i = 0; i < nums.length - 2; i++) {
@@ -32,10 +32,10 @@ class Solution {
                 }
             }
         }
-        return res;
-       /* List<List<Integer>> res = new ArrayList<>();
+        return res;*/
+        List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);
-        for(int i =0;i<nums.length;i++){
+        for(int i =0;i<nums.length-2;i++){
              // Skip duplicate values for i
             if (i > 0 && nums[i] == nums[i - 1]) {
                 continue;
@@ -49,10 +49,7 @@ class Solution {
                 }else if(sum>0){
                     e--;
                 }else if(sum == 0){
-                    List<Integer> temp = Arrays.asList(nums[i],nums[s],nums[e]);
-                    if(!res.contains(temp)){
-                        res.add(temp);
-                    }
+                   res.add(Arrays.asList(nums[i], nums[s], nums[e]));
                      // Skip duplicates for s and e
                     while (s < e && nums[s] == nums[s + 1]) s++;
                     while (s < e && nums[e] == nums[e - 1]) e--;
@@ -62,6 +59,6 @@ class Solution {
                 }
             }
         }
-        return res;*/
+        return res;
     }
 }
