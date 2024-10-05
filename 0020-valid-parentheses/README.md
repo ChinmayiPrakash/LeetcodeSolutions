@@ -48,3 +48,19 @@
 	<li><code>1 &lt;= s.length &lt;= 10<sup>4</sup></code></li>
 	<li><code>s</code> consists of parentheses only <code>&#39;()[]{}&#39;</code>.</li>
 </ul>
+
+
+**Solution**
+  - **Initialize a stack** to keep track of opening brackets.
+- **If the string has an odd length**, return `false` (since an odd number of characters can't have all valid pairs).
+- **For each character** in the string:
+  - If the character is an **opening bracket** (`'('`, `'{'`, `'['`):
+    - Push the opening bracket onto the stack.
+  - If the character is a **closing bracket** (`')'`, `'}'`, `']'`):
+    - If the stack is empty, return `false` (there's no corresponding opening bracket).
+    - Pop the top of the stack and check:
+      - If the popped element does not match the closing bracket, return `false`.
+- **After processing all characters**:
+  - If the stack is empty, return `true` (all opening brackets were matched).
+  - If the stack is not empty, return `false` (some opening brackets were not matched).
+
