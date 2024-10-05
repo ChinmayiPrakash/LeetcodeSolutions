@@ -1,56 +1,37 @@
 class Solution {
     public int maxArea(int[] height) {
-        int i = 0;
-        int j = height.length-1 ;
-        int max = 0,temp=0;
-        int l=0;
-        boolean status = false;
-        while(i != j) {
+        //Here we are using two pointers approach where s =0 e = height.length-1
+        //move which ever value is lower 
+        //But when the values are equal move pointer with greater height
+        // calculate area at every stage and compare.
 
-            if (height[i] > height[j]) {
-                l = height[j];
-                temp = l * (j - i);
-                j--;
-            } else if (height[i] < height[j]) {
-                l = height[i];
-                temp = l * (j - i);
-                i++;
-            } else {
-                 if (height[i + 1] < height[i]) {
-                    l = height[i];
-                    temp = l * (j - i);
-                    i++;
-                } else if (height[j - 1] < height[j]) {
-                    l = height[j];
-                    temp = l * (j - i);
-                    j--;
+        int max_area = 0,area =0;
+        int s = 0;
+        int e = height.length-1;
+        while(s<e){
+            if(height[s]<height[e]){
+                area = (height[s] * (e-s));
+                s++;
+            }else if(height[s]>height[e]){
+                area = (height[e] * (e-s));
+                e--;
+            }else if(height[s]==height[e]){
+                area = (height[s] * (e-s));
+                if(s+1 < e-1){
+                    if(height[s+1]>height[e-1]){
+                    s++;
+                }else if(height[s+1]<height[e-1]){
+                    e--;
+                }else{
+                    s++;
                 }
-                else{
-                    if(height[i+1]>height[j-1]){
-                    l = height[i];
-                    temp = l * (j - i);
-                    i++;
-                }
-                else{
-                    l = height[j];
-                    temp = l * (j - i);
-                    j--;
-                }
-
+                }else{
+                    s++;e--;
                 }
                 
             }
-            if (temp > max) {
-                max = temp;
-            }
-
+            max_area = Math.max(max_area,area);
         }
-
-        return max;
-    
-
-
+        return max_area;
     }
-
-
 }
