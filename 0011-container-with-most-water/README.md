@@ -30,3 +30,36 @@
 	<li><code>2 &lt;= n &lt;= 10<sup>5</sup></code></li>
 	<li><code>0 &lt;= height[i] &lt;= 10<sup>4</sup></code></li>
 </ul>
+
+**Solution**
+### Initialize two pointers:
+
+- Set `s` (start pointer) to `0` (beginning of the array).
+- Set `e` (end pointer) to `height.length - 1` (end of the array).
+
+### Initialize variables:
+
+- `max_area = 0`: To track the maximum area found so far.
+- `area = 0`: To calculate the area at each stage.
+
+### While `s < e` (while the two pointers haven't crossed each other):
+
+- **If `height[s] < height[e]`** (start height is less than end height):
+  - Calculate `area = height[s] * (e - s)`.
+  - Move the start pointer `s` to the right (`s++`).
+
+- **Else if `height[s] > height[e]`** (start height is greater than end height):
+  - Calculate `area = height[e] * (e - s)`.
+  - Move the end pointer `e` to the left (`e--`).
+
+- **Else if `height[s] == height[e]`** (heights are equal):
+  - Calculate `area = height[s] * (e - s)`.
+  - Compare the next heights (`height[s + 1]` and `height[e - 1]`):
+    - If `height[s + 1] > height[e - 1]`, move the start pointer (`s++`).
+    - Else if `height[s + 1] < height[e - 1]`, move the end pointer (`e--`).
+    - Else (both are equal), move both pointers (`s++`, `e--`).
+
+- **Update `max_area`** by comparing the current `max_area` with the newly calculated `area`.
+
+### After the loop ends:
+- Return `max_area` as the result.
