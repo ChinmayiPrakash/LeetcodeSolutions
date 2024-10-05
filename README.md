@@ -24,4 +24,12 @@
 |  |
 | ------- |
 | [0011-container-with-most-water](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0011-container-with-most-water) |
+## String
+|  |
+| ------- |
+| [0020-valid-parentheses](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0020-valid-parentheses) |
+## Stack
+|  |
+| ------- |
+| [0020-valid-parentheses](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0020-valid-parentheses) |
 <!---LeetCode Topics End-->
