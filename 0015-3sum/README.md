@@ -39,3 +39,16 @@ Notice that the order of the output and the order of the triplets does not matte
 	<li><code>3 &lt;= nums.length &lt;= 3000</code></li>
 	<li><code>-10<sup>5</sup> &lt;= nums[i] &lt;= 10<sup>5</sup></code></li>
 </ul>
+
+**Solution**
+1. **Initialize an empty list** to store the result.
+2. **Sort the input array** to facilitate the use of the two-pointer technique.
+3. **Iterate through the array**, selecting each element as the first number of the potential triplet.
+4. **Skip duplicate elements** to avoid repeating triplets in the result.
+5. For each selected element, **set two pointers**: one starting just after the current element and the other at the end of the array.
+6. **Calculate the sum** of the three numbers (the current element and the two pointers).
+7. If the sum is **less than zero**, increment the left pointer to get a larger number.
+8. If the sum is **greater than zero**, decrement the right pointer to get a smaller number.
+9. If the sum **equals zero**, add the triplet to the result list and adjust both pointers to skip over any duplicate values.
+10. **Continue the process** until all valid triplets are found, and finally, **return the result list**.
+
