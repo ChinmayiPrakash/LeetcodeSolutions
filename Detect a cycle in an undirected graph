@@ -1,0 +1,98 @@
+**Undirected Graph Cycle**
+**Difficulty: MediumAccuracy: 30.13%Submissions: 468K+Points: 4**
+Given an undirected graph with V vertices labelled from 0 to V-1 and E edges, check whether it contains any cycle or not. Graph is in the form of adjacency list where adj[i] contains all the nodes ith node is having edge with.
+
+NOTE: The adjacency list denotes the edges of the graph where edges[i] stores all other vertices to which ith vertex is connected.
+
+**Examples:**
+Input: V = 5, E = 5
+adj = [[1], [0, 2, 4], [1, 3], [2, 4], [1, 3]] 
+Output: 1
+Explanation: 
+1->2->3->4->1 is a cycle.
+ 
+Input: V = 4, E = 2
+adj = [[], [2], [1, 3], [2]]
+Output: 0
+Explanation: 
+
+No cycle in the graph.
+ 
+Expected Time Complexity: O(V + E)
+Expected Space Complexity: O(V) 
+
+**Solution**
+class Solution {
+    public class Pair<K, V> {
+    private K key;
+    private V value;
+
+    public Pair(K key, V value) {
+        this.key = key;
+        this.value = value;
+    }
+
+    public K getKey() {
+        return key;
+    }
+
+    public V getValue() {
+        return value;
+    }
+
+    public void setKey(K key) {
+        this.key = key;
+    }
+
+    public void setValue(V value) {
+        this.value = value;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + key + ", " + value + ")";
+    }
+}
+    // Function to detect cycle in an undirected graph.
+    public boolean isCycle(int V, ArrayList<ArrayList<Integer>> adj) {
+        int[] visited = new int[V]; // Visited array for all vertices
+        
+        // Check each component of the graph (to handle disconnected graphs)
+        for (int i = 0; i < V; i++) {
+            if (visited[i] == 0) {
+                if (bfs(visited, adj, i)) { // Start BFS from node `i`
+                    return true; // Cycle found
+                }
+            }
+        }
+        return false; // No cycle found
+    }
+    
+    // BFS function to detect a cycle starting from a given vertex
+    boolean bfs(int[] visited, ArrayList<ArrayList<Integer>> adj, int start) {
+        Queue<Pair<Integer, Integer>> queue = new LinkedList<>();
+        queue.offer(new Pair<>(start, -1)); // Start with the node and parent as -1
+        visited[start] = 1; // Mark the starting node as visited
+        
+        while (!queue.isEmpty()) {
+            Pair<Integer, Integer> newpair = queue.poll(); // Dequeue the next node
+            int cur = newpair.getKey();   // Current node
+            int parent = newpair.getValue(); // Parent of the current node
+            
+            // Traverse all adjacent vertices (neighbors)
+            for (int neighbor : adj.get(cur)) {
+                // If the neighbor is not visited, mark it and add it to the queue
+                if (visited[neighbor] == 0) {
+                    visited[neighbor] = 1;
+                    queue.offer(new Pair<>(neighbor, cur));
+                }
+                // If the neighbor is visited and not the parent, it means we found a cycle
+                else if (neighbor != parent) {
+                    return true; // Cycle detected
+                }
+            }
+        }
+        return false; // No cycle detected from this node
+    }
+    
+}
