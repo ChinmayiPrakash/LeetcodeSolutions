@@ -28,8 +28,14 @@
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0020-valid-parentheses) |
+| [0227-basic-calculator-ii](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0227-basic-calculator-ii) |
 ## Stack
 |  |
 | ------- |
 | [0020-valid-parentheses](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0020-valid-parentheses) |
+| [0227-basic-calculator-ii](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0227-basic-calculator-ii) |
+## Math
+|  |
+| ------- |
+| [0227-basic-calculator-ii](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0227-basic-calculator-ii) |
 <!---LeetCode Topics End-->
