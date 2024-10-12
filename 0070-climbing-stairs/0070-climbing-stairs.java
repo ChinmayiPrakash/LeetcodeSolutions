@@ -1,7 +1,8 @@
 class Solution {
 public int climbStairs(int n) {
-int prev2 =1;
-int prev =1;
+    // we reduced code from recurssion to memoization then to tabulation then to space complexity reduction
+int prev2 =1;//this is for n==0;
+int prev =1;//this is for n==1;
 if(n==1 || n==0){
     return prev;
 }
