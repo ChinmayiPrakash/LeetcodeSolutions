@@ -37,5 +37,14 @@
 ## Math
 |  |
 | ------- |
+| [0070-climbing-stairs](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0070-climbing-stairs) |
 | [0227-basic-calculator-ii](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0227-basic-calculator-ii) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0070-climbing-stairs) |
+## Memoization
+|  |
+| ------- |
+| [0070-climbing-stairs](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0070-climbing-stairs) |
 <!---LeetCode Topics End-->
