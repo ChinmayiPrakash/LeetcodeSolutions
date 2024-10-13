@@ -27,6 +27,12 @@ class Solution {
         int[] dp = new int[cost.length];
         Arrays.fill(dp,-1);
         return Math.min(solve(0,cost,dp),solve(1,cost,dp));*/
+
+        /*
+        Below solution is Bottom up approach 
+        TC = O(N)
+        SC = O(1)
+        */ 
         int n = cost.length;
         if(n ==2){
             return Math.min(cost[0],cost[1]);
