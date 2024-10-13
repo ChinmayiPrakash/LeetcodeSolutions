@@ -7,6 +7,7 @@
 | [0001-two-sum](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0001-two-sum) |
 | [0011-container-with-most-water](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0011-container-with-most-water) |
 | [0015-3sum](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0015-3sum) |
+| [0747-min-cost-climbing-stairs](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0747-min-cost-climbing-stairs) |
 ## Hash Table
 |  |
 | ------- |
@@ -43,6 +44,7 @@
 |  |
 | ------- |
 | [0070-climbing-stairs](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0070-climbing-stairs) |
+| [0747-min-cost-climbing-stairs](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0747-min-cost-climbing-stairs) |
 ## Memoization
 |  |
 | ------- |
