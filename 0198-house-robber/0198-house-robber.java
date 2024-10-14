@@ -22,7 +22,8 @@ class Solution {
        return dp[nums.length - 1];
     }*/
     // we can reduce space complexity to O(1) by reassigning dp values to same array.
-
+        // TC = O(N)
+        // SC = O(1)
     public int rob(int[] nums){
         if(nums.length == 1){
             return nums[0];
