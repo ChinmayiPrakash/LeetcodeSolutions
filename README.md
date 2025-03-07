@@ -7,6 +7,7 @@
 | [0001-two-sum](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0001-two-sum) |
 | [0011-container-with-most-water](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0011-container-with-most-water) |
 | [0015-3sum](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0015-3sum) |
+| [0073-set-matrix-zeroes](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0073-set-matrix-zeroes) |
 | [0075-sort-colors](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0075-sort-colors) |
 | [0198-house-robber](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0213-house-robber-ii) |
@@ -17,6 +18,7 @@
 |  |
 | ------- |
 | [0001-two-sum](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0001-two-sum) |
+| [0073-set-matrix-zeroes](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0073-set-matrix-zeroes) |
 ## Two Pointers
 |  |
 | ------- |
@@ -69,4 +71,8 @@
 |  |
 | ------- |
 | [2058-concatenation-of-array](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/2058-concatenation-of-array) |
+## Matrix
+|  |
+| ------- |
+| [0073-set-matrix-zeroes](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0073-set-matrix-zeroes) |
 <!---LeetCode Topics End-->
