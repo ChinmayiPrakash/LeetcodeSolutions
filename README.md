@@ -13,6 +13,7 @@
 | [0198-house-robber](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0198-house-robber) |
 | [0213-house-robber-ii](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0213-house-robber-ii) |
 | [0283-move-zeroes](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0283-move-zeroes) |
+| [0485-max-consecutive-ones](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0485-max-consecutive-ones) |
 | [0747-min-cost-climbing-stairs](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/0747-min-cost-climbing-stairs) |
 | [1231-replace-elements-with-greatest-element-on-right-side](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/1231-replace-elements-with-greatest-element-on-right-side) |
 | [1878-check-if-array-is-sorted-and-rotated](https://github.com/ChinmayiPrakash/LeetcodeSolutions/tree/master/1878-check-if-array-is-sorted-and-rotated) |
